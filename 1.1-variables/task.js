@@ -12,10 +12,11 @@ let algebra = a;
 }
 
 function sayHello(userName) {
-	
-    // реализуйте здесь задание №2
-    
-	return // ваш ответ;
+	// реализуйте здесь задание №2
+    let myName = userName;
+
+    messages = (`Привет, мир! Меня зовут ${userName}`);
+	return( messages); // ваш ответ;
 }
 
 function calculateFormula() {
