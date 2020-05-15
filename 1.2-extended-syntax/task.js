@@ -1,4 +1,4 @@
-'use strict';
+'use stripct';
 
 function getResult(a, b, c){
     // код для задачи №1 писать здесь
@@ -19,7 +19,8 @@ function getResult(a, b, c){
     }
 
     return x;
-}
+} 
+
 function getAverageMark(marks){
    // код для задачи №2 писать здесь
   let  averageMark = 0;
@@ -38,10 +39,18 @@ function getAverageMark(marks){
     // return averageMark;
  }
 
-function askDrink(name, dateOfBirthday) {
+function askDrink(name, dateOfBirthday){
     // код для задачи №3 писать здесь
+    if ((new Date().getFullYear() - dateOfBirthday.getFullYear()) > 18) {
+    	return `Не желаете ли олд-фэшн, ${name}?`;
+    } else {
+    	return  `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
+    }
     // return result;
 }
+
+
+
 
 
   
