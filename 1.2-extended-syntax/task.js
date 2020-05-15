@@ -20,15 +20,28 @@ function getResult(a, b, c){
 
     return x;
 }
-
-function getAverageMark(marks) {
-    // код для задачи №2 писать здесь
+function getAverageMark(marks){
+   // код для задачи №2 писать здесь
+  let  averageMark = 0;
+    if (marks.length === 0) {
+    	return 0;
+    } else if (marks.length > 5){
+    	console.log("количество оценок больше 5");
+    	marks = marks.splice(0, 5);
+    } 
+    let sum = 0;
+    for (let i = 0; i < marks.length; i++){
+    	sum += marks[i];
+      }
+      let average = sum / marks.length;
+    return average;
     // return averageMark;
-}
+ }
 
 function askDrink(name, dateOfBirthday) {
     // код для задачи №3 писать здесь
     // return result;
 }
+
 
   
