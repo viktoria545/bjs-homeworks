@@ -28,5 +28,5 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 
 
 function getGreeting(name) {
-  
+  return `Привет, мир! Меня зовут ${name || "Аноним"}`;
 }
