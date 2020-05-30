@@ -31,3 +31,54 @@ function showSolutionsMessage(a, b, c) {
     }
 }
 
+//Задача 2
+function getAverageScore(data) {
+    let average = 0;
+    let counter = 0;
+    for (let prop in data) {
+        average += getAverageMark(data[prop]);
+        data[prop] = getAverageMark(data[prop]);
+        counter++;
+
+    }
+    if (counter !== 0) {
+        average = average / counter;
+    }
+    data.average = average;
+
+    return data;
+
+}
+
+function getAverageMark(marks) {
+    if (marks.length === 0) {
+        return 0;
+    }
+   let  sum = 0;
+
+    for (let i = 0; i < marks.length; i++) {
+        sum += marks[i];
+
+    }
+    return sum / marks.length;
+}
+
+
+
+
+//Задача 3
+function getPersonData(secretData) {
+
+    return {
+        firstName: getDecodedValue(secretData.aaa),
+        lastName: getDecodedValue(secretData.bbb)
+    }
+}
+
+function getDecodedValue(secret) {
+    if (secret === 0) {
+        return `Родриго`;
+    } else if (secret === 1) {
+        return `Эмильо`;
+    }
+}
