@@ -27,7 +27,7 @@ function showSolutionsMessage(a, b, c) {
     } else if (result.length === 1) {
         console.log(`Уравнение имеет один корень X₁ = ${result.roots[x1]}`);
     } else {
-        console.log(`Уравнение имеет два корня. X₁ = ${result.roots[x1]}, X₂ = ${result.roots[x2]}`);
+        console.log(`Уравнение имеет два корня. X₁ = ${result.roots[x1]}`);
     }
 }
 
