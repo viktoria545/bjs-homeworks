@@ -10,7 +10,7 @@ function getAnimalSound(animal) {
 
 function getAverageMark(marks) {
 
-	 if (marks.length === 0) {
+    if (marks.length === 0) {
         return 0;
     }
 
@@ -24,7 +24,7 @@ function getAverageMark(marks) {
 
     let roundedAverage = average;
     return roundedAverage;
- }
+}
 
 
 
@@ -33,10 +33,6 @@ function checkBirthday(birthday) {
     birthday = Number(new Date(birthday));
     let diff = now - birthday;
     let milliseconds = 365.25 * 24 * 60 * 60 * 1000;
-    let age  = diff / milliseconds ;
+    let age = diff / milliseconds;
     return age >= 18;
 }
-    
-
-
-
