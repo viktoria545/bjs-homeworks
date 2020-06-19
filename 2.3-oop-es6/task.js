@@ -1,4 +1,3 @@
-
 //Задача 1;
 
 class Weapon {
@@ -22,7 +21,7 @@ class Weapon {
     getDamage() {
         if (this.durability === 0) {
             return 0;
-        } else if (this.durabilityy >= (0.3 * this._durability)) {
+        } else if (this.durability >= (0.3 * this._durability)) {
             return this.attack;
         } else {
             return this.attack / 2;
@@ -36,7 +35,7 @@ class Weapon {
         return true;
 
     }
-}
+};
 
 const arm = new Weapon({
     name: "Рука",
@@ -166,12 +165,14 @@ class StudentLog {
         return this.name;
     }
 
+
+
     addGrade(grade, subject) {
-    	 if (this.book[subject] !== undefined) {
+         if (this.book[subject] === undefined) {
             this.book[subject] = [];
         } if ((typeof grade !== "number") || grade < 1 || grade > 5) {
             console.log(`Вы пытались поставить оценку ${grade} по предмету  ${subject}. Допускаются только числа от 1 до 5.`);
-        } else {
+        } else { console.log(this.book);
            this.book[subject].push(grade);
         }
         return this.book[subject].length;
@@ -179,11 +180,11 @@ class StudentLog {
     }
 
     getAverageBySubject(subject) {
-        if (this.book[subject] != undefined) {
+        if (this.book[subject] === undefined) {
             return 0;
         }
         let sum = 0;
-        
+
         let subLength = this.book[subject].length;
         for (let i = 0; i < subLength; i++) {
             sum += this.book[subject][i];
@@ -208,13 +209,15 @@ class StudentLog {
 
 }
 
-/*const log = new StudentLog('Олег Никифоров');
-
+const log = new StudentLog('Олег Никифоров');
 log.addGrade(2, 'algebra');
 log.addGrade(4, 'algebra');
 log.addGrade(5, 'geometry');
 log.addGrade(4, 'geometry');
-
 console.log(log.getTotalAverage()); 
 
-*/
+
+
+
+
+
