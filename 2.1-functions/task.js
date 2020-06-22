@@ -25,9 +25,9 @@ function showSolutionsMessage(a, b, c) {
     if (result.length === 0) {
         console.log(`Уравнение не имеет вещественных корней`);
     } else if (result.length === 1) {
-        console.log(`Уравнение имеет один корень X₁ = ${result.roots}`);
+        console.log(`Уравнение имеет один корень X₁ = ${result.roots[0]}`);
     } else {
-        console.log(`Уравнение имеет два корня. X₁ = ${result.roots}`);
+        console.log(`Уравнение имеет два корня. X₁ = ${result.roots[0]},  X₂ = ${result.roots[1]}`);
     }
 }
 
